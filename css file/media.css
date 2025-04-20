@@ -1,0 +1,258 @@
+@media (max-width: 600px) {
+    .nav-menu{
+        display: none;
+    }
+    .nav-menu li a{
+        display: none;
+    }
+    .slide{
+        justify-content: center;
+    }
+    .slide .slide-img{
+        position: static;
+        translate: 0 0%;
+        width: 150%;
+        height: 150%;
+    }
+    .content{
+        width: 500px;
+        left: 7%;
+        right: 0;
+    }
+    .models.actve-2{
+        width: 500px;
+        filter: drop-shadow(15px 5px 0 gold);
+    }
+    .prgraph{
+        align-self: center;
+        text-align: center;
+    }
+    /* شي على جنب : المنيو الثاني  */
+    .b-menu{
+        display: flex;
+    }
+    .menu-filde{
+        display: flex;
+    }
+    .nav-plus{
+        display: flex;
+    }
+    /* قسم مين احنا */
+    .top p,.span{
+        font-size: 16vw;
+    }
+    .top .span{
+        font-size: 10vw;
+    }
+    .bottom p:nth-child(1){
+        font-size: 4vw;
+    }
+    .p-social{
+        font-size: 3vw;
+        translate: 0 25%;
+    }
+    .social-contact{
+        translate: 0 25%;
+    }
+    /* قسم المنتجات  */
+    .text-filde:nth-child(1) h1{
+        font-size: 16vw;
+    }
+    .text-filde:nth-child(1) h1 p{
+        font-size: 2.2vw;
+        translate: 85% 250%;
+    }
+    .product-filde , .pro{
+        width: 70%;
+    }
+    .p-p{
+        font-size: 7vw;
+    }
+    /* قسم الاراء */
+    .comment-section h1{
+        font-size: 16vw;
+    }
+    .comment-section h1 span{
+        font-size: 7vw;
+    }
+    .img-reviwe{
+        width: 50%;
+        height: 50%;
+    }
+    .img-reviwe:nth-child(2){
+        filter: blur(1px);
+    }
+    .img-reviwe:nth-child(3){
+        filter: blur(1px);
+    }
+    .comments-filde{
+        height: 95%;
+        bottom: 5%;
+        flex-direction: column;
+    }
+    .comment{
+        width: 40%;
+        translate: 0 0;
+        bottom: 0;
+    }
+    .comment:nth-child(1){
+        rotate: 0deg;
+        left: 10%;
+        top: 0;
+    }
+    .comment:nth-child(2){
+        left: 10%;
+        bottom: 5%;
+    }
+    .comment:nth-child(3){
+        rotate: -0deg;
+        right: 5%;
+        top: 20%;
+    }
+    .profile-pic{
+        width: 40px;
+        height: 40px;
+    }
+    .comment h6{
+        font-size: 1.5vw;
+        translate: -35% 950%;
+    }
+    .comment p{
+        font-size: 11px;
+    }
+    .img-move img{
+        width: 85%;
+    }
+    /* القسم السفلي */
+    
+    .street-part , .help-part{
+        width: 50%;
+        height: 50%;
+    }
+    .street-part ul , .help-part ul{
+        gap: 3px;
+    }
+    .email-part{
+        width: 100%;
+        height: 20%;
+        justify-content: flex-start;
+        padding-top: 2.2%;
+    }
+    .email-part input{
+        display: none;
+    }
+    .email-part button{
+        display: none;
+    }
+    .email-part button svg{
+        display: none;
+    }
+    .email-part label{
+        display: none;
+    }
+    .email-part hr{
+        display: none;
+    }
+    .email-part p{
+        display: none;
+    }
+    .email-part p a{
+        display: none;
+    }
+    .email-part a{
+        display: block;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 6px;
+    }
+    .email-part a:hover{
+        padding: 5px 14px;
+        letter-spacing: 3px;
+    }
+    /* قسم المميزات */
+    .offer-section h1{
+        font-size: 10vw;
+    }
+    .offer-section h1 span{
+        font-size: 17vw;
+    }
+    .curcle-offers{
+        width: 45%;
+        height: 60%;
+        align-self: flex-end;
+        translate: 0 -10%;
+        border-radius: 0 0 30px 30px;
+    }
+    .curcle-offers img {
+        width: 70%;
+        align-self: flex-start;
+        translate: 0 -72%;
+    }
+    .spicals-filde{
+        height: 70%;
+        width: 100%;
+        gap: 25%;
+        translate: 50% -10%;
+    }
+    .spicals-filde:nth-last-child(1){
+        translate: -50% 10%;
+    }
+    .offers{
+        border-radius: 30px 30px;
+    }
+    .s1 .offers:nth-child(1) , .s1 .offers:nth-child(2){
+        width: 100%;
+    }
+    .s2 .offers:nth-child(1) , .s2 .offers:nth-child(2){
+        width: 100%;
+        translate: 0 0;
+    }
+    .spicals-filde:nth-last-child(1) .offers{
+        border-radius: 30px 30px;
+    }
+    .offers p{
+        font-size: 2vw;
+        translate: -10% 0;
+    }
+    .s2 .offers p {
+        translate: 10% 0;
+    }
+    .offers img{
+        width: 30%;
+        translate: 0 0;
+    }
+    .s1 .offers:nth-child(1)  img{
+        right: 0;
+        translate: 30% -25%;
+    }
+    .s1 .offers:nth-child(2)  img{
+        width: 35%;
+        right: 0;
+        translate: 30% -35%;
+    }
+    .s1 .offers:nth-child(3)  img{
+        width: 18%;
+        right: 0;
+        translate: 20% -30%;
+    }
+    .s2 .offers:nth-child(1)  img{
+        width: 27%;
+        left: 0;
+        translate: -20% -30%;
+    }
+    .s2 .offers:nth-child(2)  img{
+        width: 25%;
+        left: 0;
+        translate: -20% -35%;
+    }
+    .s2 .offers:nth-child(3)  img{
+        width: 30%;
+        left: 0;
+        translate: -20% -40%;
+    }
+    .blank{
+        display: none;
+    }
+}

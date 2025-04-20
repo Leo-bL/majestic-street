@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css file/email.css">
+    <link rel="stylesheet" href="css file/email media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Righteous&display=swap" rel="stylesheet">
+    <title>sign in</title>
+</head>
+<body><div class="abdo"></div>
+    <section class="sign-section">
+        
+        <div class="sign-in">
+            <h1>sign in and stya longer with us</h1>
+                <label for="">email:</label>
+                <input type="email" placeholder="big.bro@gmail.com">
+                <label for="">password:</label>
+                <input type="password" placeholder="the_parfect#1" class="input-plus">
+                <button>sign in</button>
+                <hr>
+                <button><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-google"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a9.96 9.96 0 0 1 6.29 2.226a1 1 0 0 1 .04 1.52l-1.51 1.362a1 1 0 0 1 -1.265 .06a6 6 0 1 0 2.103 6.836l.001 -.004h-3.66a1 1 0 0 1 -.992 -.883l-.007 -.117v-2a1 1 0 0 1 1 -1h6.945a1 1 0 0 1 .994 .89c.04 .367 .061 .737 .061 1.11c0 5.523 -4.477 10 -10 10s-10 -4.477 -10 -10s4.477 -10 10 -10z" /></svg>google accuont</button>
+                <p>why you don't have an accuont! <br> <button class="to-sign-up">sign up</button> </p>
+        </div>
+        <div class="blank">
+            <h1>hi bro !</h1>
+            <p>sign in <br>And continue your journey  <br> to become more coolest</p>
+            <h1>who are you ?</h1>
+            <p>We don't care, <br> create an account <br> and join our world </p>
+        </div>
+        <div class="sign-up">
+            <h1>sign up to become one of us</h1>
+            <label for="">first name:</label>
+            <input type="text" placeholder="leo">
+            <label for="">last name:</label>
+            <input type="text" placeholder="golden arm">
+            <label for="">email:</label>
+            <input type="email" placeholder="nobody.like@gmail.com">
+            <label for="">password:</label>
+            <input type="password" placeholder="the_only_one@1" class="input-plus">
+            <label for="">comfort password:</label>
+            <input type="password" placeholder="your cool password">
+            <button>sign up</button>
+            <hr>
+            <p>what?... you have an accuont!? <br> <button class="to-sign-in">sign in</button> </p>
+        </div>
+    </section>
+    <script>
+        const sign_up = document.querySelector('.to-sign-up');
+        const blank = document.querySelector('.blank');
+        const sign_in = document.querySelector('.to-sign-in');
+        const sign_in_section = document.querySelector('.sign-in');
+        const sign_up_section = document.querySelector('.sign-up');
+        sign_up.addEventListener('click', function(){
+            blank.classList.add('blank2');
+            blank.children[0].style.translate = "-150% -100%";
+            blank.children[1].style.translate = `-150% -25%`;
+            blank.children[2].style.translate = `0 -200%`;
+            blank.children[3].style.translate = `0 10%`;
+        });
+        sign_in.addEventListener('click', function(){
+            blank.classList.remove('blank2')
+            blank.children[0].style.translate = "-0% -100%";
+            blank.children[1].style.translate = `-0% -25%`;
+            blank.children[2].style.translate = `150% -200%`;
+            blank.children[3].style.translate = `150% 10%`;
+        });
+            function mobile_device(){
+                if(window.innerWidth <= 749){
+                    sign_up.onclick = function(){
+                        sign_up_section.style.translate = `0 0`
+                    }
+                    sign_in.onclick = function(){
+                        sign_up_section.style.translate = `0 110%`
+                    }
+                }else{
+                    sign_in.onclick = null;
+                    sign_up.onclick = null;
+                    sign_up_section.style.translate = `0 0`
+                }
+            };
+            window.addEventListener('load', mobile_device);
+            window.addEventListener('resize', mobile_device);
+    </script>
+</body>
+</html>

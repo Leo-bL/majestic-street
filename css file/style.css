@@ -1,0 +1,974 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    transition: all .75s ease;
+    font-family: "Bangers", system-ui;
+    user-select: none;
+}
+body{
+    height: 100vh;
+    background-color: black;
+}
+/* قسم الرأس  */
+.head-section{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+    z-index: 2;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0 50px 50px;
+}
+/* ناف الكملبيوتر */
+.street{
+    max-width: 40%;
+    width: 200px;
+    cursor: pointer;
+    transition: .3s ease;
+    translate: 10% 0;
+}
+.street:hover{
+    transform: scale(1.15);
+    filter: drop-shadow(0px 2px 0px gold);
+}
+#menu{
+   display: flex; 
+   justify-content: flex-end;
+   padding: 25px;
+   width: 70%;
+   gap: 55px;
+   list-style: none;
+   font-family: "Bangers", system-ui;
+  font-style: normal;
+  z-index: 1000;
+  translate: 0 0;
+}
+#menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+#menu li:nth-last-child(1) a{
+    background-color: gold;
+    width: 16px;
+    padding: 10px 10px 5px 40px;
+    border-radius: 10px;
+    margin-left: -30px;
+    box-shadow: 3px 3px 0 black;
+}
+#menu li a svg{
+    position: absolute;
+    transform: scale(1.5);
+    translate: -130% -10%;
+}
+#menu li{
+    transition: .3s;
+}
+#menu li:hover{
+    text-shadow: 0px 3px  0 gold;
+    transform: scale(1.15);
+}
+/* ناف الجوال */
+.b-menu{
+    position: absolute;
+    top: 35px;
+    right: 0;
+    display: none;
+    width: 10%;
+    height: 20px;
+    margin-right: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 50000000;
+}
+.b-menu:hover{
+    transform: scale(1.1);
+}
+.b-menu span{
+    background-color: black;
+    width: 35px;
+    height: 5px;
+    border-radius: 16px;
+    transition: .3s;
+}
+.bar-1{
+    translate: 0 100%;
+    rotate: 45deg;
+}
+.bar-2{
+    translate: 0 -100%;
+    rotate: -45deg;
+}
+.menu-filde{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-filde-plus{
+    translate: 0 -100% ;
+}
+.nav-plus{
+    flex-direction: column;
+    text-align: center;
+}
+.body-plus{
+    overflow: hidden;
+}
+/* قسم السلايد */
+.slide-section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+}
+.slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.75s ease;
+    position: relative;
+    overflow: hidden;
+}
+.slide-section .bg{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    filter: blur(2px);
+}
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.slide .slide-img{
+    position: absolute;
+    right: -400px;
+    width: 80%;
+    height: 80%;
+    translate: -20% 30%;
+    opacity: 0;
+    
+}
+.slide-img.actve{
+    opacity: 1;
+}
+.models{
+    position: absolute;
+    width: 500px;
+    z-index: 2;
+    translate: 0 100%;
+    align-self: flex-end;
+    justify-self: flex-start;
+    transition: 1s ease;
+    z-index: 0;
+}
+.models.actve-2{
+    width: 600px;
+    object-fit: cover;
+    translate: 0 30%;
+    filter: drop-shadow(10px -5px 0 gold) drop-shadow(-10px 5px rgba(0, 0, 0, 0.384));
+}
+.content{
+    position: absolute;
+    z-index: 1;
+    width: 700px;
+    left:-10px;
+    translate: 0 -100%;
+    transition: 1s ease;
+}
+.content.actve-3{
+    translate: 0 0;
+}
+.prgraph{
+    position: absolute;
+    left: 50px;
+    bottom: -100%;
+    font-family: "Righteous", system-ui;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    align-self: flex-end;
+    z-index: 1;
+    transition: 1s ease;
+}
+.prgraph span{
+    font-weight: 800;
+    text-shadow: 4px 4px 0 gold;
+    transition: 2s ease;
+}
+.prgraph.actve-4{
+    bottom: 50px;
+}
+/* قسم مين احنا */
+.about-section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+}
+.half{
+    width: 75%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.bottom{
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+}
+.half img{
+    transform: scale(2);
+    height: 100%;
+    position: absolute; 
+}
+.top img{
+    bottom: -50%;
+    filter: drop-shadow(5px -0px 0 gold);
+}
+.bottom img{
+    position: absolute;
+    align-self: center;
+    top: -50%;
+    filter: grayscale(100%) drop-shadow(-5px 0px rgba(0, 0, 0, 0.384));
+    z-index: 0;
+}
+.top p,.span{
+    font-weight: 600;
+    font-size: 8vw;
+    color: gold;
+    text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px  4px 0 black, 4px  4px 0 black;
+    letter-spacing: 2px;
+    text-align: center;
+    translate: 0 0%;
+    transform: scaleX(1.5);
+}
+.top .span{
+    position: absolute;
+    bottom: 20px;
+    font-size: 4vw;
+    color: white;
+    z-index: 2;
+}
+.bottom p:nth-child(1){
+    align-self: center;
+    text-align: center;
+    font-family: "Righteous", system-ui;
+    font-size: 2.5vw;
+    letter-spacing: -1px;
+    text-shadow: 1px  1px 0 white, -1px  -1px 0 white;
+    z-index: 1;
+}
+.p-social{
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+    font-size: 1.5vw;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    letter-spacing: 2px;
+    translate: 0 100%;
+}
+.bottom .span2{
+    font-weight: 700;
+    text-shadow: 1px  1px 0 gold, -1px  -1px 0 gold;
+}
+.social-contact{
+    z-index: 2;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    translate: 0 50%;
+}
+.social-contact a{
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+.social-contact a svg{
+    color: white;
+    padding: 2px;
+    border-radius: 6px;
+    transform: scale(1.5);
+}
+.insta svg{
+    background:linear-gradient(20deg,  #fcf81c,  #ee2a7b , #6228d7);
+}
+.feac svg{
+    background-color: rgb(45, 45, 158);
+}
+.pint svg{
+    background-color: red;
+}
+.tik{
+    background-color: black;
+    padding: 5px 8px;
+    border-radius: 6px;
+}
+.tik svg {
+    filter: drop-shadow(1px 1px 0px rgba(255, 0, 0, 0.863)) 
+    drop-shadow(-1px -1px 0px rgba(37, 131, 255, 0.877));
+}
+.social-contact a:hover{
+    transform: scale(1.2);
+}
+.paper-filde{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    rotate: 90deg;
+    bottom: 50%;
+    translate: 0 50%;
+    z-index: 1;
+}
+.paper{
+    width: calc(100%/3);
+    filter: drop-shadow(7px 0px 0 rgba(0, 0, 0, 0.418)) brightness(120%);
+    mix-blend-mode: overlay;
+}
+/* قسم المميزات */
+.offer-section{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+}
+.offer-section h1{
+    position: absolute;
+    align-self: flex-start;
+    font-weight: 600;
+    font-size: 4vw;
+    color: white;
+    text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px  4px 0 black, 4px  4px 0 black;
+    letter-spacing: 2px;
+    align-self: flex-start;
+    position: absolute;
+    translate: 0 15%;
+}
+.offer-section h1 span{
+    position: absolute;
+    color: gold;
+    font-size: 7vw;
+    translate: -62% 35%;
+}
+.curcle-offers{
+    width: 33%;
+    height: 60%;
+    background: linear-gradient(135deg, #FFC107, #FFB300);
+    border-radius: 50%;
+    translate: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.curcle-offers img {
+    position: absolute;
+    width: 90%;
+    filter: drop-shadow(-10px 5px 0 rgba(0, 0, 0, 0.253));
+    translate: 0 10%;
+    z-index: 1;
+}
+.spicals-filde{
+    position: absolute;
+    width: 130%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+    translate: 60% 10%;
+}
+.spicals-filde:nth-last-child(1){
+    translate: -60% 10%;
+}
+.offers{
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.089);
+    border:3px solid rgba(0, 0, 0, 0.075);
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:5px;
+}
+.offers p {
+    text-align: center;
+    font-family: "Righteous", system-ui;
+    letter-spacing: -1px;
+}
+.offers p span{
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.spicals-filde:nth-last-child(1) .offers{
+    border-radius: 30px 0 0 30px;
+    padding-right:-15px;
+}
+.s1 .offers:nth-child(1){
+    width: 80%;
+}
+.s1 .offers:nth-child(2){
+    width: 90%;
+}
+.s2 .offers:nth-child(1){
+    width: 80%;
+    translate: 20% 0;
+}
+.s2 .offers:nth-child(2){
+    width: 90%;
+    translate: 10% 0;
+}
+.offers img{
+    width: 20%;
+    right: 10%;
+    filter: drop-shadow(-4px -0px 0 rgba(0, 0, 0, 0.205));
+    translate: 0 0;
+}
+.s1 .offers:nth-child(2) img{
+    translate: 40% 0;
+}
+.s1 .offers:nth-child(3) img{
+    width: 11%;
+    translate: 100% 0;
+}
+.s2 .offers img{
+    left: -5%;
+}
+.s2 .offers:nth-child(2) img{
+    width: 17%;
+    translate: 0% 0;
+}
+.s2 .offers:nth-child(3) img{
+    width: 18%;
+    translate: 9% -13%;
+}
+/* قسم المنتجات  */
+.product-section{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.text-filde{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.text-filde:nth-child(1){
+    height: 90%;
+    position: relative;
+}
+.text-filde:nth-child(2){
+    height: 10%;
+}
+.text-filde:nth-child(1) h1{
+    font-weight: 600;
+    font-size: 7vw;
+    color: gold;
+    text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px  4px 0 black, 4px  4px 0 black;
+    letter-spacing: 2px;
+    align-self: flex-start;
+    position: absolute;
+    translate: -80% 15%;
+    z-index: 1;
+}
+.text-filde:nth-child(1) h1 span{
+    position: absolute;
+    color: white;
+    translate: 0 50%;
+}
+.text-filde:nth-child(1) h1 p{
+    font-size: 1vw;
+    text-shadow: 0 0 0;
+    color: black;
+    font-family: "Righteous", system-ui;
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    translate: 80% 200% ;
+}
+.product-filde , .pro{
+    width: 35%;
+    height: 70%;
+    background-image: url(bg-img/bg_5.png);
+    background-size: cover;
+    background: linear-gradient(135deg, #FFC107, #FFB300);
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    rotate: 5deg;
+    translate: 0 10%;
+}
+.pro{
+    background: black;
+    border: 3px solid gold;
+    rotate: -5deg;
+}
+.product{
+    position: absolute;
+    width: 130%;
+    opacity: 0;
+    rotate: -5deg;
+    translate: 0% 10%;
+    filter: drop-shadow(-5px 5px 0 rgba(0, 0, 0, 0.658)) drop-shadow(5px -5px rgba(255, 255, 255, 0.801));
+}
+.product:nth-child(1){
+    width: 120%;
+}
+.product:nth-child(2){
+    width: 115%;
+    rotate: 10deg;
+}
+.pro-actve{
+    opacity: 1;
+    translate: -0% 0;
+}
+.p-p{
+    position: absolute;
+    font-size: 4vw;
+    color: white;
+    padding: 1px 20px;
+    letter-spacing: 4px;
+    box-shadow: 5px -5px 0 white;
+    background-color: black;
+    z-index: 2;
+    opacity: 0;
+    transform: scaleX(0);
+}
+.first{
+    translate: 90% -100%;
+    rotate: 65deg;
+}
+.second{
+    translate: -25% 275%;
+    rotate: 15deg;
+    box-shadow: 5px -5px 0 white;
+}
+.theerd{
+    translate: -80% 250%;
+    rotate: -90deg;
+    box-shadow: -5px 5px 0 white;
+}
+.p-actve{
+    opacity: 1;
+    transform: scaleX(1);
+}
+.specils-plus{
+    width: 95%;
+    height: 85%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #FFC107, #FFB300);
+}
+#next,#prev{
+    position: absolute;
+    width: 10%;
+    font-size: 150%;
+    z-index: 1;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    transition: .2s ;
+}
+#next{
+    right: 0;
+    z-index: 5;
+}
+#prev{
+    left: 0;
+}
+#prev:hover{
+    font-size: 170%;
+    cursor: pointer;
+    text-shadow: 1px 1px 5px white , -1px -1px 5px white ;
+}
+#next:hover{
+    font-size: 170%;
+    cursor: pointer;
+    text-shadow: 1px 1px 5px white , -1px -1px 5px white ;
+}
+.more{
+    width: 100%;
+    padding:  100%;
+    color: black;
+    white-space: nowrap;
+    font-family: "Bangers", system-ui;
+    font-size: 40px;
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+}
+.more:hover{
+    font-size: 45px;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+}
+/* قسم الاراء */
+.comment-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+}
+.comment-section h1{
+    font-weight: 600;
+    font-size: 7vw;
+    color: gold;
+    text-shadow: -4px -4px 0 black, 4px -4px 0 black, -4px  4px 0 black, 4px  4px 0 black;
+    letter-spacing: 2px;
+    align-self: flex-start;
+    position: absolute;
+    translate: 0 15%;
+}
+.comment-section h1 span{
+    position: absolute;
+    translate: -70% 110%;
+    font-size: 3vw;
+    transform: rotate(-20deg);
+    color: white;
+    z-index: 3;
+}
+.img-reviwe{
+    width: calc(100%/3);
+    height: 60%;
+    background-color: white;
+    border: 3px solid rgba(0, 0, 0, 0.075);
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.089);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* here */
+    position: absolute;
+}.img-reviwe:nth-child(2){
+    left: 4%;
+    rotate: -10deg;
+    translate: 0 4%;
+}
+.img-reviwe:nth-child(3){
+    right: 4%;
+    rotate: 10deg;
+    translate: 0 4%;
+}
+.img-reviwe div{
+    width: 93%;
+    height: 70%;
+    translate: 0 -15%;
+    display: flex;
+    overflow: hidden;
+}
+.img-reviwe div img{
+    width: 100%;
+    align-self: center;
+}
+.comments-filde{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    bottom: 10%;
+    z-index: 1;
+}
+.comment{
+    width: calc(100%/3);
+    height: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+    letter-spacing: 1px;
+    position: absolute;
+}
+.comment:nth-child(1){
+    rotate: -10deg;
+    left: 2%;
+    translate: 0 4%;
+    z-index: -1;
+}
+.comment:nth-child(3){
+    rotate: 10deg;
+    right: 2%;
+    translate: 0 4%;
+    z-index: -2;
+}
+.comment img{
+    position: absolute;
+    width: 100%;
+    filter: brightness(1000%) grayscale(100%) drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.116));
+    z-index: -1;
+}
+.profile-pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    translate: 15px 0;
+    background-image: url(bg-img/p-bg_1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.pic2{
+    background-image: url(bg-img/p-bg_2.jpg);
+}
+.pic3{
+    background-image: url(bg-img/p-bg_3.jpg);
+}
+.comment h6{
+    position: absolute;
+    left: 90px;
+    top: 15%;
+    color: gray;
+    font-weight: 200;
+}
+.comment p{
+    font-family: "Righteous", system-ui;
+    font-size: 20px;
+    letter-spacing: -1px;
+    translate: 0 20%;
+}
+.more-reviwes{
+    align-self: center;
+    width: 100%;
+    padding: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+.plus2{
+    width: 95%;
+    height: 85%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #FFC107, #FFB300);
+    overflow: hidden;
+    align-self: flex-end;
+    height: 8%;
+    translate: 0 -20%;
+    z-index: 0;
+}
+/* القسم السفلي */
+.foot-section{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.foot-filde{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+}
+.foot{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.part{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.part h1{
+    font-size: 2.5vw;
+    letter-spacing: 1px;
+    color: white;
+}
+.brand-part{
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    position: relative;
+}
+.brands{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 5px ;
+    padding-right:5px ;
+    animation: linear loop 20s infinite;
+}
+.brands:nth-child(2){
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+}
+@keyframes loop {
+    0%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.img-move{
+    width: 10%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+}
+.img-move img{
+    width: 50%;
+}
+.street-part,.help-part{
+    justify-content: flex-start;
+    text-align: center;
+    gap: 5px;
+}
+.street-part h1 , .help-part h1{
+    translate: 0 80%;
+}
+.street-part ul , .help-part ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    translate: 0 20%;
+}
+.street-part ul li a , .help-part ul li a{
+    font-family: "Righteous", system-ui;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.479);
+    transition: .5s  ;
+}
+.street-part ul li a:hover , .help-part ul li a:hover{
+    color: white;
+}
+.email-part{
+    width: 50%;
+    gap: 10px;
+    color: white;
+    letter-spacing: 1px;
+    z-index: 10;
+    position: relative;
+}
+.email-part input{
+    width: 50%;
+    height: 9%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 6px;
+    font-family: "Righteous", system-ui;
+    outline: none;
+}
+.email-part button{
+    width: 40%;
+    height: 8%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.email-part button svg{
+    position: absolute;
+    translate: -120% -22%;
+}
+.email-part hr{
+    width: 40%;
+}
+.email-part p a{
+    display: inline;
+    font-family: "Righteous", system-ui;
+    letter-spacing: 0px;
+    word-spacing: -3px;
+    text-decoration: none;
+    color: gold;
+}
+.email-part a{
+    display: none;
+}
+.foot-part{
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    letter-spacing: 1px;
+    color: rgb(59, 59, 59);
+}
+.foot-part div svg:hover{
+    cursor: pointer;
+    color: black;
+}
