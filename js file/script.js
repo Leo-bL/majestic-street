@@ -37,7 +37,7 @@ window.addEventListener('scroll', function () {
     // مشان ناف الجوال
     if(scrollY >= 5 && !nav_hide){
         nav_hide = true ;
-        b_menu.style.translate = `0 -300%`;
+        b_menu.style.translate = `0 -500%`;
     
     }else if(scrollY < 5 && nav_hide){
         nav_hide = false;
