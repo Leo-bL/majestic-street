@@ -8,28 +8,40 @@
     .slide{
         justify-content: center;
     }
-    .slide .slide-img{
-        position: static;
-        translate: 0 0%;
-        width: 200%;
-        height: 100%;
-        translate: 0 10%;
+    .dot-filde{
+        z-index: 3;
+        left: 5%;
+        translate: 0 -20%;
     }
     .content{
-        width: 525px;
-        left: -3%;
-        top: 5%;
+        left: 0;
+        translate: 0 -150%;
+        width: 100%;
     }
-    .content:nth-of-type(1){
-        width: 1000px;
+    .models{
+        width: 120%;
+        align-self: center;
+        translate: 0% 100%;
     }
-    .models.actve-2{
-        width: 700px;
-        filter: drop-shadow(15px 5px 0 gold);
+    .slide:nth-last-child(2) .models{
+        width: 130%;
+    }
+    .slide:nth-last-child(1) .models{
+        width: 175%;
+    }
+    .actve-2{
+        translate: 0% 20%;
     }
     .prgraph{
-        align-self: center;
+        left: unset;
+        translate: 0% 500%;
+        font-size: 8vw;
+        border-left: none;
+        border-bottom: 5px solid black;
         text-align: center;
+    }
+    .actve-4{
+        translate: 0% 300%;
     }
     /* شي على جنب : المنيو الثاني  */
     .b-menu{
@@ -305,28 +317,40 @@
     .slide{
         justify-content: center;
     }
-    .slide .slide-img{
-        position: static;
-        translate: 0 0%;
-        width: 200%;
-        height: 100%;
-        translate: 0 10%;
+    .dot-filde{
+        z-index: 3;
+        left: 5%;
+        translate: 0 -20%;
     }
     .content{
-        width: 700px;
-        left: 10%;
-        top: 5%;
+        left: 0;
+        translate: 0 -80%;
+        width: 100%;
     }
-    .content:nth-of-type(1){
-        width: 1000px;
+    .models{
+        width: 70%;
+        align-self: center;
+        translate: 0% 100%;
     }
-    .models.actve-2{
-        width: 900px;
-        filter: drop-shadow(15px 5px 0 gold);
+    .slide:nth-last-child(2) .models{
+        width: 75%;
+    }
+    .slide:nth-last-child(1) .models{
+        width: 110%;
+    }
+    .actve-2{
+        translate: 0% 20%;
     }
     .prgraph{
-        align-self: center;
+        left: unset;
+        translate: 0% 200%;
+        font-size: 7vw;
+        border-left: none;
+        border-bottom: 5px solid black;
         text-align: center;
+    }
+    .actve-4{
+        translate: 0% 180%;
     }
     /* شي على جنب : المنيو الثاني  */
     .b-menu{
