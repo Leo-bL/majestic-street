@@ -41,7 +41,7 @@ window.addEventListener('scroll', function () {
     
     }else if(scrollY < 5 && nav_hide){
         nav_hide = false;
-        b_menu.style.translate = `0 0`
+        b_menu.style.translate = `0 -100%`
     }
 });
 // ناف الجوال
