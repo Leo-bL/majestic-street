@@ -56,19 +56,17 @@ b_menu.addEventListener('click', function(){
     body_plus.classList.toggle('body-plus')
     console.log(b_menu)
 });
-
-// قسم حركة السلايد
 let index = 0;
-function moveslide(step){
-    const slides = document.querySelectorAll('.slide-img');
-    slides[index].classList.remove('actve')
+function move(step){
+    const dots = document.querySelectorAll('.dot');
+    dots[index].classList.remove('actve-1')
     index +=step;
     if(index<0){
-        index = slides.length-1;
-    }else if(index >= slides.length){
+        index = dots.length-1;
+    }else if(index >= dots.length){
         index = 0;
     }
-    slides[index].classList.add('actve');
+    dots[index].classList.add('actve-1');
 }
 // حركة السلايد : حركة الشباب بالصور 
 let models_index = 0;
@@ -110,7 +108,7 @@ function movepragraph(prgraph_step){
     prgraph_slides[prgraph_index].classList.add('actve-4');
 }
 setInterval(function(){
-    moveslide(1);
+    move(1);
     movemodels(1);
     movecontent(1);
     movepragraph(1);
