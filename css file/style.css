@@ -215,9 +215,6 @@ body{
 .slide:nth-last-child(2) .models{
     width: 45%;
 }
-.slide:nth-last-child(1) .models{
-    width: 70%;
-}
 .actve-2{
     translate: 0 50%;
     opacity: 1;
